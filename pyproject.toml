@@ -1,0 +1,9 @@
+[project]
+name = "toxin-lab"
+version = "0.1.0"
+description = "多毒素检验批次编排的服务端基础"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
