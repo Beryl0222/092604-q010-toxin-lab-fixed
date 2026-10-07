@@ -9,7 +9,8 @@ from toxin_lab.store import Store
 class 基础行为测试(unittest.TestCase):
     def test_health(self):
         result = json.loads(handle('{"action":"health"}', Service(Store())))
-        self.assertEqual(result["status"], "ok")
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["result"]["status"], "ok")
 
     def test_register_and_find(self):
         service = Service(Store())
